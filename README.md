@@ -3,9 +3,9 @@
 [![npm](https://img.shields.io/npm/v/vue-it-bigger?color=%2341BB13)](https://www.npmjs.com/package/vue-it-bigger)
 [![Build Status](https://travis-ci.com/haiafara/vue-it-bigger.svg?branch=master)](https://travis-ci.com/haiafara/vue-it-bigger)
 [![codecov](https://codecov.io/gh/haiafara/vue-it-bigger/branch/master/graph/badge.svg)](https://codecov.io/gh/haiafara/vue-it-bigger)
-[![Depfu](https://badges.depfu.com/badges/069e198b8d20824c7de448b3506afcde/overview.svg)](https://depfu.com/github/haiafara/vue-it-bigger?project_id=12241)
+[![Depfu](https://badges.depfu.com/badges/d97efabdc36483941354cb65cd36ed01/overview.svg)](https://depfu.com/github/haiafara/vue-it-bigger?project_id=13757)
 
-A simple image / (YouTube) video lightbox component for Vue.js. Based on [vue-image-lightbox](https://github.com/pexea12/vue-image-lightbox).
+A simple image / (YouTube) video lightbox component for Vue.js 2. Based on [vue-image-lightbox](https://github.com/pexea12/vue-image-lightbox).
 
 [![Vue It Bigger Screenshot](https://imgur.com/89eZHa7.jpg)](https://haiafara.github.io/vue-it-bigger/)
 
@@ -35,8 +35,9 @@ Click on the screenshot above for a **demo**.
 
 You know the drill:
 
-```
+```bash
 npm install vue-it-bigger
+# or
 yarn add vue-it-bigger
 ```
 
@@ -380,6 +381,15 @@ After you add or modify something make sure the tests still pass:
 npm run test
 yarn test
 ```
+
+## Release
+
+1. Make sure everything works locally by running `yarn dev`
+2. Bump the version in [package.json](package.json)
+3. Draft a new release on the releases page
+    - Create a tag with the prefix **v** and the version, eg: **v0.3.0**
+    - Prefix the release title with the tag, eg: **v0.3.0 - An awesome release**
+4. Publish the release
 
 ## Credits
 
