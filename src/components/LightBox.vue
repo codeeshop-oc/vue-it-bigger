@@ -302,13 +302,18 @@ export default {
   },
 
   watch: {
+    startAt(value) {
+      this.select = value
+    },
+    showLightBox(value) {
+      this.lightBoxShown = value
+    },
     lightBoxShown(value) {
       // istanbul ignore else
       if (document != null) {
         this.onToggleLightBox(value)
       }
     },
-
     select() {
       this.$emit('onImageChanged', this.select)
 
@@ -389,6 +394,14 @@ export default {
         this.$refs.video.pause()
         this.$refs.video.currentTime = '0'
       }
+      
+      let iframes = document.querySelectorAll('iframe')
+      if(iframes.length) {
+        for(let i = 0; i < iframes.length; i++) {
+          let src = iframes[i].getAttribute('src')
+          iframes[i].setAttribute('src', src)
+        }
+      }      
     },
 
     onToggleLightBox(value) {
