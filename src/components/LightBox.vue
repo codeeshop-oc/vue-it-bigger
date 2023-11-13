@@ -38,6 +38,7 @@
                 height="315"
                 frameborder="0"
                 allowfullscreen
+                id="lightbox-iframe"
               />
             </div>
             <video
@@ -395,13 +396,10 @@ export default {
         this.$refs.video.currentTime = '0'
       }
       
-      let iframes = document.querySelectorAll('iframe')
-      if(iframes.length) {
-        for(let i = 0; i < iframes.length; i++) {
-          let src = iframes[i].getAttribute('src')
-          iframes[i].setAttribute('src', src)
-        }
-      }      
+      const iframe = document.getElementById('iframe')
+      if(iframe) {
+        iframe.setAttribute('src', iframe.getAttribute('src'))
+      }
     },
 
     onToggleLightBox(value) {
